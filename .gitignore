@@ -1,0 +1,8 @@
+# Bỏ qua toàn bộ folder .venv
+.venv/
+
+# Các thứ khác cũng nên bỏ qua
+__pycache__/
+*.pyc
+.env
+*.log
