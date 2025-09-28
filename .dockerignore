@@ -1,19 +1,18 @@
+# --- Git & VCS ---
+.git
+.gitignore
+.gitattributes
+
 # --- Python ---
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
 *.pyo
 *.pyd
 *.pkl
-*.egg-info/
-.eggs/
-dist/
-build/
-
-# Virtual environments
+*.egg-info
 .venv/
-venv/
 env/
+venv/
 
 # --- Environment files ---
 .env
@@ -25,10 +24,6 @@ logs/
 tmp/
 .cache/
 *.pid
-
-# --- Jupyter ---
-.ipynb_checkpoints/
-*.ipynb
 
 # --- OS / Editor junk ---
 .DS_Store
@@ -42,29 +37,19 @@ output/
 checkpoints/
 
 # --- Airflow ---
-# Airflow tạo log & tmp nhiều, không cần push
+# Nếu bạn mount volume airflow/dags thì không cần copy
 airflow/logs/
 airflow/tmp/
 airflow/__pycache__/
-airflow/unittests.cfg
 
 # --- Spark ---
 spark-warehouse/
 metastore_db/
-derby.log
 
 # --- Kafka ---
 kafka-logs/
 kafka-data/
-kafka-*/ # các thư mục dữ liệu runtime
 
-# --- Docker ---
-*.pid
-*.sock
-docker-compose.override.yml
-
-# --- Others ---
-coverage/
-.tox/
-.mypy_cache/
-pytest_cache/
+# --- Docker itself ---
+docker-compose.yml
+.dockerignore
